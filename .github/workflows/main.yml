@@ -1,0 +1,10 @@
+name: Free Cloud Mac
+on: workflow_dispatch
+jobs:
+  run-mac:
+    runs-on: macos-latest
+    steps:
+      - name: Initialize Free Apple Hardware
+        run: |
+          echo "Booting genuine cloud Mac server..."
+          sw_vers
