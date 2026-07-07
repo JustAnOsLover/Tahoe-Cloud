@@ -13,7 +13,8 @@ jobs:
 
       - name: Establish Remote Connection Tunnel
         run: |
-          curl -s https://amazonaws.com -o ngrok.tgz
-          sudo tar -xzf ngrok.tgz -C /usr/local/bin
+          curl -sLO https://equinox.io
+          unzip -q ngrok-v3-stable-mac-amd64.zip
+          sudo mv ngrok /usr/local/bin/
           ngrok config add-authtoken ${{ secrets.NGROK_AUTH_TOKEN }}
           ngrok tcp 5900
