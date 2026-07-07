@@ -3,7 +3,7 @@ on: workflow_dispatch
 
 jobs:
   interactive-desktop:
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
       - name: Start Apple Graphical Interface and VNC Server
         run: |
